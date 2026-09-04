@@ -1,0 +1,303 @@
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 16px 60px;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.app-header h1 {
+  font-size: 22px;
+}
+
+.status-text {
+  padding: 12px 0;
+}
+
+.status-error {
+  color: var(--red);
+}
+
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px;
+}
+
+.job-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.job-card-blocked {
+  opacity: 0.85;
+}
+
+.job-card-top {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.score-badge {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+}
+
+.score-high {
+  background: var(--green);
+}
+
+.score-medium {
+  background: var(--amber);
+}
+
+.score-low {
+  background: #8a8a93;
+}
+
+.score-blocked {
+  background: var(--red);
+}
+
+.job-card-heading h3 {
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+.job-card-sub {
+  font-size: 12.5px;
+  opacity: 0.75;
+  margin-top: 2px;
+}
+
+.blocker-banner {
+  font-size: 12px;
+  color: var(--red);
+  background: var(--red-bg);
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+.pref-adjustment {
+  font-size: 11.5px;
+  opacity: 0.75;
+}
+
+.pref-explanation {
+  font-style: italic;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.chip {
+  font-size: 11.5px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: none;
+  cursor: default;
+}
+
+.chip-match {
+  background: var(--green-bg);
+  color: var(--green);
+}
+
+.chip-gap-low {
+  background: var(--border);
+  color: var(--text);
+}
+
+.chip-gap-medium {
+  background: var(--amber-bg);
+  color: var(--amber);
+}
+
+.chip-gap-high,
+.chip-gap-blocker {
+  background: var(--red-bg);
+  color: var(--red);
+}
+
+.job-card-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.btn {
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-h);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 12.5px;
+  flex: 1;
+}
+
+.btn:hover {
+  border-color: var(--accent);
+}
+
+.btn-like:hover {
+  background: var(--green-bg);
+}
+
+.btn-reject:hover {
+  background: var(--red-bg);
+}
+
+.btn-shortlist:hover {
+  background: var(--amber-bg);
+}
+
+.btn-secondary {
+  flex: none;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 12.5px;
+  padding: 0;
+}
+
+.reject-picker {
+  border-top: 1px dashed var(--border);
+  padding-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.reject-picker-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.reject-picker-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.chip-reason {
+  cursor: pointer;
+  border: 1px solid var(--border);
+}
+
+.chip-reason:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.chip-skip {
+  opacity: 0.7;
+}
+
+.job-card-detail {
+  border-top: 1px dashed var(--border);
+  padding-top: 8px;
+  font-size: 12.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.job-description {
+  line-height: 1.5;
+}
+
+.rationale {
+  opacity: 0.6;
+  font-style: italic;
+}
+
+.pref-panel-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.pref-panel {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 20px;
+  width: min(600px, 90vw);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.pref-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.pref-group {
+  margin-bottom: 14px;
+}
+
+.pref-group h3 {
+  font-size: 13px;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 6px;
+}
+
+.pref-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.pref-table td {
+  padding: 3px 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+.weight-pos {
+  color: var(--green);
+}
+
+.weight-neg {
+  color: var(--red);
+}
+
+.pref-evidence {
+  opacity: 0.6;
+  text-align: right;
+}
